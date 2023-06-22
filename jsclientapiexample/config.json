@@ -1,0 +1,14 @@
+{
+    "$schema": "runtime-config.schema.json",
+    "javascript": {
+        "eval": [
+            "innovaphone-jsclientapiexampleservice.js"
+        ]
+    },
+    "apis": {
+        "innovaphone-jsclientapiexample": {
+            "com.innovaphone.phonelookup": {},
+            "com.innovaphone.phoneinfo": {}
+        }
+    }
+}
