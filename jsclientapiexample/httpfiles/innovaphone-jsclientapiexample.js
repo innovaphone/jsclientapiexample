@@ -63,7 +63,7 @@ innovaphone.jsclientapiexample = innovaphone.jsclientapiexample || function (sta
             app.sendSrc(
                 { api: "LookupApi", mt: "NumberLookup", e164: getNormalizedNumber(phonelookupApiRequest.msg) },
                 function (resultMsg) { // this function is called when response to sendSrc arrives 
-                    var response = { mt: "LookupInfo", dn: undefined, link: undefined, contact: {}, photourl: undefined, adjust: true };
+                    var response = { mt: "LookupInfo", dn: undefined, link: undefined, contact: {}, photourl: undefined, adjust: true }; //adjust number by a trunk prefix
                     response.dn = resultMsg.name;
                     sender.send(response, phonelookupApiRequest.consumer, phonelookupApiRequest.src); // consumer and src must be returned to sender
                     sender.send({ mt: "LookupResult" }, phonelookupApiRequest.consumer, phonelookupApiRequest.src); // finishing LookupResult message
